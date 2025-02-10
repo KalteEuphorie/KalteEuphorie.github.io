@@ -1,0 +1,128 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 54px;
+    overflow: auto;
+    font-family: "Carlito", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0 24px;
+    color: #1D0501;
+    background: linear-gradient(to top, #fffcdc, #d9a7c7) no-repeat 100%;
+}
+
+main {
+    max-width: 980px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "about-me skills"
+    "education skills"
+    "experience experience";
+    grid-column-gap: 32px;
+    grid-row-gap: 54px;
+}
+
+main > section:first-of-type {
+    grid-area: about-me;
+}
+
+main > section:nth-of-type(2) {
+    grid-area: skills;
+}
+
+main > section:nth-of-type(3) {
+    grid-area: education;
+}
+
+main > section:last-of-type {
+    grid-area: experience;
+}
+
+header {
+    padding-block-start: 48px;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-block-end: 48px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 12px;
+    padding: 16px 24px 24px;
+    background-color: #fffdfe;
+}
+
+h1, h2, h3, p, ul, dl, dd {
+    margin: 0;
+}
+
+h1 {
+    font-size: 64px;
+    color: #ffffff;
+}
+
+h2 {
+    width: fit-content;
+    padding: 4px 20px;
+    transform: skew(-16deg);
+    color: #ffffff;
+    background-color: #d50189;
+}
+
+p {
+    max-width: 800px;
+}
+
+a {
+    color: #07cefb;
+    font-size: 1.2em;
+}
+
+strong {
+    font-weight: 700;
+}
+
+dl {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+dt {
+    padding-block-end: 8px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+li::marker {
+    content: '⭐️ ';
+}
+
+@media screen and (max-width: 980px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}
