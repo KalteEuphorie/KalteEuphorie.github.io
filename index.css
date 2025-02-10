@@ -25,13 +25,15 @@ main {
     max-width: 980px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
     grid-template-areas:
     "about-me skills"
     "education skills"
-    "experience experience";
+    "experience experience"
+    "contacts contacts";
     grid-column-gap: 32px;
     grid-row-gap: 54px;
+    padding-block-end: 54px;
 }
 
 main > section:first-of-type {
@@ -46,18 +48,16 @@ main > section:nth-of-type(3) {
     grid-area: education;
 }
 
-main > section:last-of-type {
+main > section:nth-of-type(4) {
     grid-area: experience;
+}
+
+main > section:last-of-type {
+    grid-area: contacts;
 }
 
 header {
     padding-block-start: 48px;
-}
-
-footer {
-    display: flex;
-    justify-content: flex-end;
-    padding-block-end: 48px;
 }
 
 section {
@@ -120,9 +120,21 @@ li::marker {
 }
 
 @media screen and (max-width: 980px) {
+    body {
+        gap: 24px;
+    }
+
     main {
         display: flex;
         flex-direction: column;
         gap: 24px;
+    }
+
+    header {
+        padding-block-start: 24px;
+    }
+
+    h1 {
+        font-size: 1.9em;
     }
 }
