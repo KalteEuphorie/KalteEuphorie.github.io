@@ -5,6 +5,7 @@ html, body {
 
 html {
     overflow: hidden;
+    background-color: #fffcdc;
 }
 
 body {
@@ -135,6 +136,6 @@ li::marker {
     }
 
     h1 {
-        font-size: 1.9em;
+        font-size: 1.7em;
     }
 }
